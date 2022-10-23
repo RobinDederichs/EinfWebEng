@@ -1,2 +1,2 @@
 # EinfWebEng
-Repository for the lecture "Einführung in Wen Engineering"
+Repository for the lecture "Einführung in Web Engineering"
