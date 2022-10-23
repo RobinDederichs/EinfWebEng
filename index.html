@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>WebApp_rdeder2s</title>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 <body>
 <h2>Übung1:</h2>
@@ -37,13 +44,41 @@
 
     With HTML you can create your own Website.</p>
 <h4>2. Wie kann man eine geschachtelte geordnete Liste der Schachtelungstiefe 3 erzeugen?</h4>
-<p></p>
+<ol>
+    <li>Coffee</li>
+    <ol>
+        <li>Coffee</li>
+        <ol>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ol>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+    <li>Tea</li>
+    <li>Milk</li>
+</ol>
 <h4>3. Wie ist eine HTML-Tabelle aufgebaut?</h4>
-<p></p>
+<table>
+    <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+    </tr>
+    <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+    </tr>
+    <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+    </tr>
+</table>
 <h4>4. Welche Konventionen sollte man bei Pfaden und Dateinamen beachten?</h4>
-<p></p>
-<h4>5. Wie baut man in HTML ein Menü?</h4>
-<p></p>
+<p>Nach dem Standard RFC 3986 in BNF: URI ::= scheme ":" authority [ "/" path ] [ "?" query ] [ "#" fragment ]</p>
 <h4>6. Welche Attribute sollte man bei Bildern wie verwenden?</h4>
 <p>src: um die Quelle des Bildes per Hyperlink anzugeben. alt: um bei einem Ladefehler des Bildes einen Alternativtext anzuzeigen.
     width und height: um die größe des Bildes festzulegen</p>
