@@ -5,6 +5,9 @@
     <title>WebApp_rdeder2s</title>
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         table, th, td {
             border: 1px solid black;
             border-collapse: collapse;
@@ -13,6 +16,7 @@
 </head>
 <body>
 <h2>Übung1:</h2>
+<input type="button" class="flip" value="Zum Foto" onClick="window.location='#meineID'"/>
 <h3>Aufgabe 1.1 Fachliche Argumentationen über Erfolgsprinzipien des WWW</h3>
 <h4>1. Mit welchen fachlichen Argumenten wurde das WWW-Proposal von TBL abgelehnt?</h4>
 <p>Die Hypertext-Konferenz empfand die Ideen von TBL als rückständig zur aktuellen Entwicklung des Hypertexts,
@@ -82,7 +86,9 @@
 <h4>6. Welche Attribute sollte man bei Bildern wie verwenden?</h4>
 <p>src: um die Quelle des Bildes per Hyperlink anzugeben. alt: um bei einem Ladefehler des Bildes einen Alternativtext anzuzeigen.
     width und height: um die größe des Bildes festzulegen</p>
+<div id = "meineID" class="rp-meineID">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
      alt="Logo HTML5" width="200" height="200">
+    </div>
 </body>
 </html>
