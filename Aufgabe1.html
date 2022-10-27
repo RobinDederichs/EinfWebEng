@@ -11,9 +11,37 @@
             border: 1px solid black;
             border-collapse: collapse;
         }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111111;
+        }
     </style>
 </head>
 <body>
+<ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a title="Klicken um zur ersten Aufgabe zu kommen" href="Aufgabe1.html">Aufgabe 1</a></li>
+    <li><a title="Klicken um zur zweiten Aufgabe zu kommen" href="Aufgabe2.html">Aufgabe 2</a></li>
+</ul>
 <h2>Übung1:</h2>
 <input type="button" class="flip" value="Zum Foto" onClick="window.location='#meineID'"/>
 <hr>
