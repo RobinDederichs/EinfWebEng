@@ -1,94 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de-DE">
 <head>
     <meta charset="UTF-8">
     <title>WebApp_rdeder2s</title>
 
     <style>
-        html {
-            scroll-behavior: smooth;
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
         }
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111111;
         }
     </style>
 </head>
 <body>
-<h2>Übung1:</h2>
-<input type="button" class="flip" value="Zum Foto" onClick="window.location='#meineID'"/>
-<h3>Aufgabe 1.1 Fachliche Argumentationen über Erfolgsprinzipien des WWW</h3>
-<h4>1. Mit welchen fachlichen Argumenten wurde das WWW-Proposal von TBL abgelehnt?</h4>
-<p>Die Hypertext-Konferenz empfand die Ideen von TBL als rückständig zur aktuellen Entwicklung des Hypertexts,
-    unter anderem Störte sie die nicht vorhandene referentielle Integrität der Hyperlinks</p>
-<h4>2. Was sind die fachlichen Argumente, warum das WWW dennoch ein Erfolg wurde?</h4>
-<p>TBL ermöglichte die Evolvierbarkeit. Ebenfalls gibt es im WWW keine zentrale Kontrollinstanz, was es zu einem der erfolgreichsten
-    Medien der Welt machte, an dem jeder Nutzer frei partiziepieren kann.</p>
-<h4>3. Was wäre der Preis für die garantierte Verhinderung von “broken links”?</h4>
-<p>Eine zentrale Kontrollinstanz, weniger Freiheit und somit nicht die freie Gestaltung und Entwicklung des WWW</p>
 
-<h3>Aufgabe 1.2 HTTP</h3>
-<h4>1. Sie bekommen im Browser den HTTP Status Code 200. Was bedeutet das?</h4>
-<p>Success, oder Success ohne Inhalt</p>
-<h4>2. Sie bekommen im Browser den HTTP Status Code 301. Was hat das zu bedeuten?</h4>
-<p>301 gibt mir den Hinweis zurück, dass die gesuchte Ressource dauerhaft auf eine neue Adresse verschoben wurde und liefert
-    mir diese direkt mit</p>
-<h4>3. Sie bekommen im Browser den HTTP Status Code 400. Was hat das zu bedeuten? Was können Sie dagegen tun?</h4>
-<p>400 bedeutet fehlerhafte Anfrage. Das bedeutet, dass ich meine HTTP-Anfrage kontrollieren muss</p>
-<h4>4. Sie bekommen im Browser den HTTP Status Code 403. Was hat das zu bedeuten? Was können Sie dagegen tun?</h4>
-<p>403 bedeutet fehlende Zugangsberechtigung. Um dagegen etwas zu tun muss ich mir von dem Admin der Website erforderliche Rechte einholen</p>
-<h4>5. In einer Webanwendung benötigen Sie eine OPTIONS-Anfrage, die die Optionen des Servers vor dem eigentlichen Zugriff erfragen soll.
-    Aus Performanzgründen soll die Abfrage jedoch cacheable sein. Wie könnten Sie dafür eine Lösung angehen?</h4>
-<p>Stackoverflow sagt: "It's not cacheable, period. Sorry."</p>
+<h1 style="text-align:center;background-color:#4eaae8;color:white;padding:20px;">WebApp_rdeder2s</h1>
+<h2>Aufgaben:</h2>
+<ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a title="Klicken um zur ersten Aufgabe zu kommen" href="Aufgabe1.html">Aufgabe 1</a></li>
+    <li><a title="Klicken um zur zweiten Aufgabe zu kommen" href="Aufgabe2.html">Aufgabe 2</a></li>
+</ul>
 
-<h3>1.3. HTML-Literatur lesen und Fragen beantworten</h3>
-<h4>1. Was ist HTML?</h4>
-<p>The language for building web pages:
-    HTML is the standard markup language for Web pages.
-
-    With HTML you can create your own Website.</p>
-<h4>2. Wie kann man eine geschachtelte geordnete Liste der Schachtelungstiefe 3 erzeugen?</h4>
-<ol>
-    <li>Coffee</li>
-    <ol>
-        <li>Coffee</li>
-        <ol>
-            <li>Coffee</li>
-            <li>Tea</li>
-            <li>Milk</li>
-        </ol>
-        <li>Tea</li>
-        <li>Milk</li>
-    </ol>
-    <li>Tea</li>
-    <li>Milk</li>
-</ol>
-<h4>3. Wie ist eine HTML-Tabelle aufgebaut?</h4>
-<table>
-    <tr>
-        <th>Company</th>
-        <th>Contact</th>
-        <th>Country</th>
-    </tr>
-    <tr>
-        <td>Alfreds Futterkiste</td>
-        <td>Maria Anders</td>
-        <td>Germany</td>
-    </tr>
-    <tr>
-        <td>Centro comercial Moctezuma</td>
-        <td>Francisco Chang</td>
-        <td>Mexico</td>
-    </tr>
-</table>
-<h4>4. Welche Konventionen sollte man bei Pfaden und Dateinamen beachten?</h4>
-<p>Nach dem Standard RFC 3986 in BNF: URI ::= scheme ":" authority [ "/" path ] [ "?" query ] [ "#" fragment ]</p>
-<h4>6. Welche Attribute sollte man bei Bildern wie verwenden?</h4>
-<p>src: um die Quelle des Bildes per Hyperlink anzugeben. alt: um bei einem Ladefehler des Bildes einen Alternativtext anzuzeigen.
-    width und height: um die größe des Bildes festzulegen</p>
-<div id = "meineID" class="rp-meineID">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
-     alt="Logo HTML5" width="200" height="200">
-    </div>
 </body>
 </html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    <meta charset="UTF-8">
+    <title>Aufgabe 1 - HTML</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+<h2>Übung1:</h2>
+<input type="button" class="flip" value="Zum Foto" onClick="window.location='#meineID'"/>
+<hr>
+<h3>Aufgabe 1.1 Fachliche Argumentationen über Erfolgsprinzipien des <abbr title="World Wide Web">WWW</abbr></h3>
+<p><b>1. Mit welchen fachlichen Argumenten wurde das WWW-Proposal von <abbr title="Tim Berners Lee">TBL</abbr> abgelehnt?</b></p>
+<p>Die Hypertext-Konferenz empfand die Ideen von TBL als rückständig zur aktuellen Entwicklung des Hypertexts,
+    unter anderem störte sie die nicht vorhandene referentielle Integrität der Hyperlinks</p>
+<p><b>2. Was sind die fachlichen Argumente, warum das WWW dennoch ein Erfolg wurde?</b></p>
+<p>TBL ermöglichte die Evolvierbarkeit. Ebenfalls gibt es im WWW keine zentrale Kontrollinstanz, was es zu einem der erfolgreichsten
+    Medien der Welt machte, an dem jeder Nutzer frei partizipieren kann.</p>
+<p><b>3. Was wäre der Preis für die garantierte Verhinderung von "broken links" ?</b></p>
+<p>Eine zentrale Kontrollinstanz, weniger Freiheit und somit nicht die freie Gestaltung und Entwicklung des WWW</p>
+<hr>
+<h3>Aufgabe 1.2 <abbr title="Hypertext Transfer Protocol">HTTP</abbr></h3>
+<p><b>1. Sie bekommen im Browser den HTTP Status Code 200. Was bedeutet das?</b></p>
+<p>Success, oder Success ohne Inhalt</p>
+<p><b>2. Sie bekommen im Browser den HTTP Status Code 301. Was hat das zu bedeuten?</b></p>
+<p>301 gibt mir den Hinweis zurück, dass die gesuchte Ressource dauerhaft auf eine neue Adresse verschoben wurde und liefert
+    mir diese direkt mit</p>
+<p><b>3. Sie bekommen im Browser den HTTP Status Code 400. Was hat das zu bedeuten? Was können Sie dagegen tun?</b></p>
+<p>400 bedeutet fehlerhafte Anfrage. Das bedeutet, dass ich meine HTTP-Anfrage kontrollieren muss</p>
+<p><b>4. Sie bekommen im Browser den HTTP Status Code 403. Was hat das zu bedeuten? Was können Sie dagegen tun?</b></p>
+<p>403 bedeutet fehlende Zugangsberechtigung. Um dagegen etwas zu tun, muss ich mir von dem Admin der Website erforderliche Rechte einholen</p>
+<p><b>5. In einer Webanwendung benötigen Sie eine OPTIONS-Anfrage, die die Optionen des Servers vor dem eigentlichen Zugriff erfragen soll.
+    Aus Performanzgründen soll die Abfrage jedoch cacheable sein. Wie könnten Sie dafür eine Lösung angehen?</b></p>
+<p>Stackoverflow sagt: "It's not cacheable, period. Sorry."</p>
+<hr>
+<h3>1.3. <abbr title="Hypertext Markup Language">HTML</abbr>-Literatur lesen und Fragen beantworten</h3>
+<p><b>1. Was ist HTML?</b></p>
+<p>The language for building web pages:
+    HTML is the standard markup language for Web pages.
+
+    With HTML, you can create your own Website.</p>
+<p><b>2. Wie kann man eine geschachtelte geordnete Liste der Schachtelungstiefe 3 erzeugen?</b></p>
+<ol>
+    <li>Coffee</li>
+    <ol>
+        <li>Coffee</li>
+        <ol>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ol>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+    <li>Tea</li>
+    <li>Milk</li>
+</ol>
+<p><b>3. Wie ist eine HTML-Tabelle aufgebaut?</b></p>
+<table>
+    <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+    </tr>
+    <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+    </tr>
+    <tr>
+        <td>Centre commercial Montezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+    </tr>
+</table>
+<p><b>4. Welche Konventionen sollte man bei Pfaden und Dateinamen beachten?</b></p>
+<p>Nach dem Standard <abbr title="Request for Comments">RFC</abbr> 3986 in <abbr title="Backus-Naur-Form">BNF</abbr>: <abbr title="Uniform Resource Identifier">URI</abbr> ::= scheme ":" authority [ "/" path ] [ "?" query ] [ "#" fragment ]</p>
+<p><b>6. Welche Attribute sollte man bei Bildern wie verwenden?</b></p>
+<p><abbr title="Source (Deutsch = Quelle)">src</abbr>: um die Quelle des Bildes per Hyperlink anzugeben. alt: um bei einem Ladefehler des Bildes einen Alternativtext anzuzeigen.
+    width und height: um die größe des Bildes festzulegen</p>
+<div id = "meineID" class="rp-meineID">
+    <figure>
+    <img title="Logo HTML5" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
+         alt="Logo HTML5" width="200" height="200">
+        <legend>Quelle: https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png
+                abgerufen am: 27.10.2022</legend>
+        </figure>
+</div>
+
+</body>
+</html>
