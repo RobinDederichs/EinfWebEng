@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 2 - CSS</title>
+
+    <style>
+        .navZeUl {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+    }
+
+    .navZeLi {
+        float: left;
+    }
+
+    .navZeLi a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    .navZeLi:hover {
+        background-color: #111111;
+    }
+    #headPic {
+        color:#000; padding:16px; background-position: center; background:#e1efbb
+        url('https://image.shutterstock.com/image-vector/vector-illustration-beautiful-dark-blue-260nw-1009280170.jpg');
+    }
+    .inTab {
+        background-color: whitesmoke;
+        font-size: large;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    td.inTab {
+        text-align: center;
+    }
+    .rows {
+        padding-left: 7px;
+        padding-right: 100px;
+    }
+    code {
+        padding: 2px 4px;
+        font-size: 90%;
+        color: #c7254e;
+        background-color: #f9f2f4;
+        border-radius: 4px;
+    }
+    a.button:link, a.button:visited {
+        background-color: #333333;
+        color: white;
+        padding: 15px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 7px;
+        margin-right: 10px;
+    }
+
+    a.button:hover, a.button:active {
+        background-color: #111111;
+    }
+    </style>
+</head>
+<body>
+<ul class="navZeUl">
+    <li class="navZeLi"><a href="../index.html">Home</a></li>
+    <li class="navZeLi"><a title="Klicken um zur ersten Aufgabe zu kommen" href="Aufgabe1.html">Aufgabe 1</a></li>
+    <li class="navZeLi"><a title="Klicken um zur zweiten Aufgabe zu kommen" href="Aufgabe2.html">Aufgabe 2</a></li>
+</ul>
+
+<div id="headPic">
+<h2>Übung 2:</h2>
+<br>
+</div>
+
+<h3>2.1 CSS Selektoren und CSS Farben</h3>
+<table>
+    <tr>
+        <td class="rows">
+            <p><b>Berechnen Sie die Spezifität folgender CSS-Selektoren:</b></p>
+            <table class="inTab">
+                <tr class="inTab">
+                    <th class="inTab">Ausdruck:</th>
+                    <th class="inTab">Spezifität:</th>
+                </tr>
+                <tr class="inTab">
+                    <td class="inTab"><code>div div div:focus .inner</code></td>
+                    <td class="inTab">023</td>
+                </tr>
+                <tr class="inTab">
+                    <td class="inTab"><code>h1 + div.main</code></td>
+                    <td class="inTab">012</td>
+                </tr>
+                <tr class="inTab">
+                    <td class="inTab"><code>div a:link[href*='h-brs']</code></td>
+                    <td class="inTab">022</td>
+                </tr>
+                <tr class="inTab">
+                    <td class="inTab"><code>nav > a:hover::before</code></td>
+                    <td class="inTab">013</td>
+                </tr>
+                <tr class="inTab">
+                    <td class="inTab"><code>ul#primary-nav li.active</code></td>
+                    <td class="inTab">112</td>
+                </tr>
+            </table>
+        </td>
+        <td class="rows">
+            <p><b>Rechnen Sie folgende RGB-Werte in HSL-Werte um:   </b></p>
+            <table class="inTab">
+                <tr class="inTab">
+                    <th class="inTab">RGB-Wert:</th>
+                    <th class="inTab">HSL-Wert:</th>
+                </tr>
+                <tr class="inTab">
+                    <td class="inTab"><code>#ffffff</code></td>
+                    <td class="inTab" style="color: hsl(0,0%,100%); background-color: #dcdcdc">hsl(0,0%,100%)</td>
+                </tr>
+                <tr class="inTab">
+                    <td class="inTab"><code>#000</code></td>
+                    <td class="inTab" style="color: hsl(0,0%,0%)">hsl(0,0%,0%)</td>
+                </tr>
+                <tr class="inTab">
+                    <td class="inTab"><code>#ab0978</code></td>
+                    <td class="inTab" style="color: hsl(318.9,90%,35.3%)">hsl(318.9,90%,35.3%)</td>
+                </tr>
+                <tr class="inTab">
+                    <td class="inTab"><code>nrgb(127,255,33)</code></td>
+                    <td class="inTab" style="color: hsl(94.6,100%,56.5%); background-color: #dcdcdc">hsl(94.6,100%,56.5%)</td>
+                </tr>
+                <tr class="inTab">
+                    <td class="inTab"><code>rgba(255,127,33,0.8)</code></td>
+                    <td class="inTab" style="color: hsl(25.4,100%,56.5%)">hsl(25.4,100%,56.5%)</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<br>
+
+<h3>2.2. CSS-Positionierung</h3>
+<a class="button" href="Aufgabe2_2_1.html" title="Zur ersten Unteraufgabe">Aufgabe 2.2.1</a>
+<a class="button" href="Aufgabe2_2_2.html" title="Zur zweiten Unteraufgabe">Aufgabe 2.2.2</a>
+<br>
+<h3>2.3. Wireframe mit HTML und CSS:</h3>
+</body>
+</html>
