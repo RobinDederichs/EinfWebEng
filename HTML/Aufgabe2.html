@@ -67,6 +67,43 @@
     a.button:hover, a.button:active {
         background-color: #111111;
     }
+
+    #Nr2_3 {
+        background-color: #a9d7d1;
+    }
+
+    .inWFfont {
+        font-family: 'Lucida Grande', 'Trebuchet MS';
+    }
+
+    #inWF {
+        background-color: #f2f2f2;
+        margin-right: 64px;
+        margin-left: 64px;
+    }
+
+    .inWFcenter {
+        text-align: center;
+        scale: 1.2;
+    }
+
+    .inWFmargin {
+        margin-bottom: 32px;
+    }
+
+        input[type=text], select {
+            padding: 7px 64px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+    label {
+        padding-left: 64px;
+        padding-right: 10px;
+    }
     </style>
 </head>
 <body>
@@ -151,5 +188,39 @@
 <a class="button" href="Aufgabe2_2_2.html" title="Zur zweiten Unteraufgabe">Aufgabe 2.2.2</a>
 <br>
 <h3>2.3. Wireframe mit HTML und CSS:</h3>
+<br>
+
+<div id="Nr2_3">
+    <h1 class="inWFfont" style="text-align: center; padding-top: 16px; ">Survey Form</h1>
+
+    <div id="inWF">
+        <p class="inWFcenter inWFfont" style="padding: 32px; margin-bottom: 32px"> Let us know how we can improve freeCodeCamp</p>
+        <form class="inWFfont inWFcenter">
+            <div class="inWFmargin">
+                <label for="name">&#42; Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your Name">
+            </div>
+
+            <div class="inWFmargin">
+                <label for="mail">&#42; Email:</label>
+                <input type="text" id="mail" name="mail" placeholder="Enter your Email">
+            </div>
+
+            <div class="inWFmargin">
+                <label for="mail">&#42; Email:</label>
+                <input type="text" id="mail" name="mail" placeholder="Enter your Email">
+            </div>
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
 </body>
 </html>
