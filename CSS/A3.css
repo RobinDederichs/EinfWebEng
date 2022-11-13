@@ -1,0 +1,66 @@
+.navZeUl {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+.navZeLi {
+    float: left;
+}
+
+.navZeLi a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.navZeLi:hover {
+    background-color: #111111;
+}
+
+.unteraufgaben {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 2vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a.button:link, a.button:visited {
+    background-color: #333333;
+    color: white;
+    padding: 1em 1em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 7px;
+    margin-left: 2vw;
+}
+
+a.button:hover, a.button:active {
+    background-color: #111111;
+}
+
+
+#headPic {
+    color:#1c1d1e; padding: 1vh 2vw;
+    background: #FFFFFF
+    url('https://www.pngall.com/wp-content/uploads/2016/07/Responsive-Web-Design-Free-Download-PNG.png')
+    center repeat scroll;
+}
+
+#head-title {
+    background-color: gainsboro;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+#bild {
+    margin-top: 30vh;
+    text-align: center;
+    scale: 1.5;
+}
