@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .navZeUl {
     list-style-type: none;
     margin: 0;
@@ -39,4 +43,56 @@ a.button:hover, a.button:active {
     position: fixed;
     bottom: 16px;
     z-index: 10;
+}
+
+.header {
+    background-color: orangered;
+    color: white;
+    padding: 5vmin;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.innerflex {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 70%
+}
+
+.lside {
+    background-color: lawngreen;
+    color: white;
+    padding: 2vmin;
+    flex: 10%
+}
+
+.main {
+    background-color: blue;
+    color: white;
+    padding: 5vmin;
+    flex: 60%
+}
+
+.rside {
+    background-color: hotpink;
+    color: white;
+    padding: 2vmin;
+    flex: 10%
+}
+
+@media screen and (max-width: 1000px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .innerflex {
+        flex-direction: column;
+    }
 }
