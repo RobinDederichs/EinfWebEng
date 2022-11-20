@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .navZeUl {
     list-style-type: none;
     margin: 0;
@@ -40,4 +44,112 @@ a.button:hover, a.button:active {
     position: fixed;
     bottom: 16px;
     z-index: 10;
+}
+
+#navigation {
+    width: 100%;
+    background-color: #222222;
+    text-align: center;
+}
+
+p, h1, h2 {
+    font-family: 'Lucida Grande', 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.1em;
+}
+
+.links {
+    color: white;
+    display: inline-block;
+    padding-left: 20px;
+}
+
+#grid {
+    background-color: #cccccc;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60px 1fr;
+    justify-content: center;
+    padding-bottom: 5vmin;
+}
+
+#head {
+    grid-area: 1/1/2/3;
+    text-align: center;
+    padding: 10px;
+}
+
+img {
+    width: 30vmax;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#pic {
+    grid-area: 2/1/3/2;
+    margin-left: 5vmax;
+    margin-top: 5vmax;
+}
+
+#text {
+    grid-area: 2/2/3/3;
+    text-align: center;
+    padding: 10px;
+    margin-top: 15vmin;
+}
+
+.text {
+    font-size: larger;
+    margin: 20px 20px 10vmin;
+}
+
+.linkbutton {
+    color: white;
+    font-weight: bold;
+}
+
+span {
+    background-color: darkorange;
+    padding: 15px 5vmin 15px 5vmin;
+    border-radius: 5px;
+}
+
+#footer {
+    background-color: #222222;
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+#bot {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    #grid {
+        grid-template-columns: 100%;
+        grid-template-rows: 60px 1fr 1fr;
+    }
+
+    .links {
+        display: block;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    #head {
+        grid-area: 1/1/2/2;
+    }
+
+    #pic {
+        grid-area: 2/1/3/2;
+        margin-top: 10vmax;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    #text {
+        grid-area: 3/1/4/2;
+    }
 }
