@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aufgabe 4 - JavaScript</title>
+
+  <link rel="stylesheet" href="../CSS/A4.css" title="CSS_for_nr_4">
+</head>
+<body>
+<ul class="navZeUl">
+  <li class="navZeLi"><a href="../index.html">Home</a></li>
+  <li class="navZeLi"><a title="Klicken um zur ersten Aufgabe zu kommen" href="Aufgabe1.html">Aufgabe 1</a></li>
+  <li class="navZeLi"><a title="Klicken um zur zweiten Aufgabe zu kommen" href="Aufgabe2.html">Aufgabe 2</a></li>
+  <li class="navZeLi"><a title="Klicken um zur dritten Aufgabe zu kommen" href="Aufgabe3.html">Aufgabe 3</a></li>
+  <li class="navZeLi"><a title="Klicken um zur vierten Aufgabe zu kommen" href="Aufgabe4.html">Aufgabe 4</a></li>
+</ul>
+
+<div id="headPic">
+  <h2><span id="head-title">Übung 4:</span></h2>
+  <br>
+</div>
+
+<h3>Aufgabe 4.1 Funktionen - Schreiben Sie folgende Funktionen in JavaScript:</h3>
+<p><b>1. Schreiben Sie eine Funktion <code>identity()</code>, die ein Argument als Parameter entgegen nimmt und dieses als Ergebnis zurück gibt.</b></p>
+<br>
+<form>
+  <label class="number" for="number4.1.1">identity()</label>
+  <input type="text" id="number4.1.1" name="number4.1.2" placeholder="Enter a Number">
+  <button type="button" onclick="document.getElementById('result4.1.1').innerHTML = identity(document.getElementById('number4.1.1').value)">Submit</button>
+</form>
+<p id="result4.1.1"></p>
+<br>
+
+<p><b>2. Schreiben Sie eine Funktion <code>identity_function()</code>, die ein Argument als Parameter entgegen nimmt und eine Funktion zurück gibt, die dieses Argument zurück gibt.</b></p>
+<br>
+<form>
+  <label class="number" for="number4.1.2">identity_function()</label>
+  <input type="text" id="number4.1.2" name="number4.1.2" placeholder="Enter a Number">
+  <button type="button" onclick="document.getElementById('result4.1.2').innerHTML = identity_function(document.getElementById('number4.1.2').value)">Submit</button>
+</form>
+<p id="result4.1.2"></p>
+<br>
+
+<p><b>3. Schreiben Sie zwei binäre Funktionen <code>add</code> und <code>mul</code>, die Summe und Produkt berechnen.</b></p>
+<br>
+<form>
+  <label class="number" for="number4.1.3.1.1">add()</label>
+  <input type="text" id="number4.1.3.1.1" name="number4.1.3.1.1" placeholder="Enter first Number">
+  <label class="number" for="number4.1.3.1.2" style="padding-left: 5px; padding-right: 5px;">+</label>
+  <input type="text" id="number4.1.3.1.2" name="number4.1.3.1.2" placeholder="Enter second Number">
+  <button type="button" onclick="document.getElementById('result4.1.3.1').innerHTML = add(document.getElementById('number4.1.3.1.1').value,
+  document.getElementById('number4.1.3.1.2').value)">Submit</button>
+</form>
+<p id="result4.1.3.1"></p>
+<br>
+
+<form>
+  <label class="number" for="number4.1.3.2.1">mul()</label>
+  <input type="text" id="number4.1.3.2.1" name="number4.1.3.2.1" placeholder="Enter first Number">
+  <label class="number" for="number4.1.3.2.2" style="padding-left: 5px; padding-right: 5px;">*</label>
+  <input type="text" id="number4.1.3.2.2" name="number4.1.3.2.2" placeholder="Enter second Number">
+  <button type="button" onclick="document.getElementById('result4.1.3.2').innerHTML = mul(document.getElementById('number4.1.3.2.1').value,
+  document.getElementById('number4.1.3.2.2').value)">Submit</button>
+</form>
+<p id="result4.1.3.2"></p>
+<br>
+
+<p><b>4. Schreiben Sie eine Addier-Funktion <code>addf()</code>, so dass <code>addf(x)(y)</code> genau x + y zurück gibt.
+  (Es haben also zwei Funktionsaufrufe zu erfolgen. <code>addf(x)</code> liefert eine Funktion, die auf y angewandt wird.)</b></p>
+<br>
+<form>
+  <label class="number" for="number4.1.4.1">fadd()</label>
+  <input type="text" id="number4.1.4.1" name="number4.1.4.1" placeholder="Enter first Number">
+  <input type="text" id="number4.1.4.2" name="number4.1.4.2" placeholder="Enter second Number">
+  <button type="button" onclick="ausgabe_faddd();">Submit</button>
+</form>
+<p id="result4.1.4"></p>
+<br>
+
+<script>
+  function identity(number) {
+    return number;
+  }
+
+  var x;
+  function identity_function(number) {
+    x = number;
+    return return_number;
+  }
+  function return_number() {
+    return x;
+  }
+
+  function add(number1, number2) {
+    return Number(number1) + Number(number2);
+  }
+  function mul(number1, number2) {
+    return Number(number1) * Number(number2);
+  }
+
+  var f;
+  var y;
+  function fadd(number) {
+    if (y === NaN) {
+      y = Number(number);
+    }
+    if (y !== NaN) {
+      return y + Number(number);
+    }
+  }
+  function ausgabe_faddd() {
+    fadd(document.getElementById('number4.1.4.1').value);
+    f = fadd;
+    document.getElementById('result4.1.4').innerHTML = f(document.getElementById('number4.1.4.2').value);
+  }
+</script>
+</body>
+</html>

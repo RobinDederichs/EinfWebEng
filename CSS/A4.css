@@ -1,0 +1,68 @@
+.navZeUl {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+.navZeLi {
+    float: left;
+}
+
+.navZeLi a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.navZeLi:hover {
+    background-color: #111111;
+}
+
+.unteraufgaben {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 2vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a.button:link, a.button:visited {
+    background-color: #333333;
+    color: white;
+    padding: 1em 1em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 7px;
+    margin-left: 2vw;
+}
+
+a.button:hover, a.button:active {
+    background-color: #111111;
+}
+
+
+#headPic {
+    color:#1c1d1e; padding: 6vh 2vw;
+    background: #FFFFFF
+    url(https://geekflare.com/wp-content/uploads/2018/06/javascript-1200x385.jpg)
+    center repeat scroll;
+}
+
+#head-title {
+    background-color: gainsboro;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+}
