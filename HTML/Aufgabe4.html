@@ -78,6 +78,19 @@
 <p id="result4.1.4"></p>
 <br>
 
+<p><b>5. Schreiben Sie eine Funktion <code>applyf()</code>, die aus einer binären Funktion wie <code>add(x,y)</code> eine Funktion <code>addf</code> berechnet,
+  die mit zwei Aufrufen das gleiche Ergebnis liefert, z.B. <code>addf = applyf(add); addf(x)(y)</code> soll <code>add(x,y)</code> liefern.
+  Entsprechend <code>applyf(mul)(5)(6)</code> soll <code>30</code> liefern, wenn <code>mul</code> die binäre Multiplikation ist.</b></p>
+<br>
+<form>
+  <label class="number" for="number4.1.5">fadd()</label>
+  <input type="text" id="number4.1.5" name="number4.1.5" placeholder="Enter first Number">
+  <input type="text" id="number4.1.4.2" name="number4.1.4.2" placeholder="Enter second Number">
+  <button type="button" onclick="ausgabe_faddd();">Submit</button>
+</form>
+<p id="result4.1.5"></p>
+<br>
+
 <script>
   function identity(number) {
     return number;
@@ -108,6 +121,8 @@
     if (y !== NaN) {
       return y + Number(number);
     }
+
+
   }
   function ausgabe_faddd() {
     fadd(document.getElementById('number4.1.4.1').value);
