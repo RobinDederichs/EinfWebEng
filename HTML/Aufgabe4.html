@@ -66,7 +66,7 @@
 <p id="result4.1.3.2"></p>
 <br>
 
-<p><b>4. Schreiben Sie eine Addier-Funktion <code>addf()</code>, so dass <code>addf(x)(y)</code> genau x + y zurück gibt.
+<p><b>4. Schreiben Sie eine Addier-Funktion <code>addf()</code>, so dass <code>addf(x)(y)</code> genau x + y zurückgibt.
   (Es haben also zwei Funktionsaufrufe zu erfolgen. <code>addf(x)</code> liefert eine Funktion, die auf y angewandt wird.)</b></p>
 <br>
 <form>
@@ -88,10 +88,42 @@
   <input type="text" id="text_function" name="function" placeholder="Choose function: add/mul">
   <input type="text" id="number4.1.5.2" name="number4.1.5.2" placeholder="Enter first Number">
   <input type="text" id="number4.1.5.3" name="number4.1.5.3" placeholder="Enter second Number">
-  <button type="button" onclick="document.getElementById('result4.1.5').innerHTML = applyf(document.getElementById('text_function').value)(document.getElementById('number4.1.5.2').value,
+  <button type="button" onclick="document.getElementById('result4.1.5').innerHTML = applyf(document.getElementById('text_function').value)
+  (document.getElementById('number4.1.5.2').value,
   document.getElementById('number4.1.5.3').value)">Submit</button>
 </form>
 <p id="result4.1.5"></p>
+<br>
+
+<h3>Aufgabe 4.3 Fibonacci</h3>
+<p>Schreiben Sie im Browser die Fibonacci-Funktion in JS und geben Sie die ersten 2000 Fibonacci-Zahlen 0,1,1,2,3,5,8,13,... auf der Konsole mit <code>console.log()</code> aus.<br>
+  Achten Sie auf Performanz: Berechnen Sie jeden Fibonacci-Wert nur einmal. Speichern Sie zu diesem Zweck jede berechnete Fibonacci-Zahl in einer Tabelle.</p>
+<br>
+
+<form>
+  <button type="button" onclick="fibo(); document.getElementById('result4.3.1').innerHTML = AusgabeMaxInt;
+document.getElementById('result4.3.2').innerHTML = AusgabeMaxNum;">
+    Ausgabe der Fibonacci Folge bis zu Stelle 2000</button>
+</form>
+<br>
+
+<p>1. Was ist die größte Fibonacci-Zahl, die sich noch als <code>Integer</code> sicher speichern lässt (Number.MAX_SAFE_INTEGER)?
+  Die wievielte Fibonacci-Zahl in der Fibonacci-Folge ist das?</p>
+<p id="result4.3.1"></p>
+<br>
+
+<p>2. Was ist die größte Fibonacci-Zahl, die sich noch als <code>Number</code> speichern lässt (Number.MAX_VALUE)?
+  Die wievielte Fibonacci-Zahl in der Fibonacci-Folge ist das (d.h. welche Stelle in der Fibonacci-Folge)?</p>
+<p id="result4.3.2"></p>
+<br>
+
+<p>3. Wechseln Sie zu <code>BigInt</code>, um alle 2000 Fibonacci-Zahlen korrekt anzuzeigen.</p>
+<br>
+
+<form>
+  <button type="button" onclick="fiboBigInt()">
+    Ausgabe der Fibonacci Folge bis zu Stelle 2000 mit BigInt</button>
+</form>
 <br>
 
 <script>
@@ -133,6 +165,53 @@
     }
     if (text === "mul") {
       return mul;
+    }
+  }
+
+  var WertMaxInt;
+  var stelleMaxInt;
+  var AusgabeMaxInt;
+  var WertMaxNum;
+  var stelleMaxNum;
+  var AusgabeMaxNum;
+  function fibo() {
+    var Folge = [];
+    Folge[0] = 0;
+    Folge[1] = 1;
+    console.log(Folge[0]);
+    console.log(Folge[1]);
+    IntFlag = false;
+    NumFlag = false;
+
+    for (var i = 2; i < 2000; i++) {
+      Folge[i] = Folge[i - 1] + Folge[i - 2];
+      if (Folge[i] > Number.MAX_SAFE_INTEGER && !IntFlag) {
+        WertMaxInt = Folge[i - 1];
+        stelleMaxInt = i - 1;
+        IntFlag = true;
+      }
+      if (Folge[i] > Number.MAX_VALUE && !NumFlag) {
+        WertMaxNum = Folge[i - 1];
+        stelleMaxNum = i - 1;
+        NumFlag = true;
+      }
+      console.log(Folge[i]);
+    }
+    AusgabeMaxInt = "Wert: " + WertMaxInt + " Stelle: " + stelleMaxInt;
+    AusgabeMaxNum = "Wert: " + WertMaxNum + " Stelle: " + stelleMaxNum;
+  }
+
+  function fiboBigInt() {
+    var Folge = [];
+    Folge[0] = BigInt(0);
+    Folge[1] = BigInt(1);
+    console.log(Folge[0]);
+    console.log(Folge[1]);
+
+    for (var i = 2; i < 2000; i++) {
+      Folge[i] = BigInt(Folge[i - 1] + Folge[i - 2]);
+
+      console.log(Folge[i]);
     }
   }
 
