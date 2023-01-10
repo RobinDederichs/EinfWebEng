@@ -73,7 +73,8 @@
   <label class="number" for="number4.1.4.1">fadd()</label>
   <input type="text" id="number4.1.4.1" name="number4.1.4.1" placeholder="Enter first Number">
   <input type="text" id="number4.1.4.2" name="number4.1.4.2" placeholder="Enter second Number">
-  <button type="button" onclick="ausgabe_faddd();">Submit</button>
+  <button type="button" onclick="document.getElementById('result4.1.4').innerHTML = fadd(document.getElementById('number4.1.4.1').value)(document.getElementById('number4.1.4.2').value)"
+  >Submit</button>
 </form>
 <p id="result4.1.4"></p>
 <br>
@@ -83,10 +84,12 @@
   Entsprechend <code>applyf(mul)(5)(6)</code> soll <code>30</code> liefern, wenn <code>mul</code> die binäre Multiplikation ist.</b></p>
 <br>
 <form>
-  <label class="number" for="number4.1.5">fadd()</label>
-  <input type="text" id="number4.1.5" name="number4.1.5" placeholder="Enter first Number">
-  <input type="text" id="number4.1.4.2" name="number4.1.4.2" placeholder="Enter second Number">
-  <button type="button" onclick="ausgabe_faddd();">Submit</button>
+  <label class="number" for="text_function">applyf()</label>
+  <input type="text" id="text_function" name="function" placeholder="Choose function: add/mul">
+  <input type="text" id="number4.1.5.2" name="number4.1.5.2" placeholder="Enter first Number">
+  <input type="text" id="number4.1.5.3" name="number4.1.5.3" placeholder="Enter second Number">
+  <button type="button" onclick="document.getElementById('result4.1.5').innerHTML = applyf(document.getElementById('text_function').value)(document.getElementById('number4.1.5.2').value,
+  document.getElementById('number4.1.5.3').value)">Submit</button>
 </form>
 <p id="result4.1.5"></p>
 <br>
@@ -112,17 +115,25 @@
     return Number(number1) * Number(number2);
   }
 
-  var f;
   var y;
   function fadd(number) {
-    if (y === NaN) {
+    if (y === undefined) {
       y = Number(number);
+      return fadd;
+    } else {
+      var result = add(y, number);
+      y = undefined;
+      return result;
     }
-    if (y !== NaN) {
-      return y + Number(number);
+  }
+
+  function applyf(text) {
+    if (text === "add") {
+      return add;
     }
-
-
+    if (text === "mul") {
+      return mul;
+    }
   }
 
 </script>
