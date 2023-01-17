@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 5 - DOM</title>
+
+    <link rel="stylesheet" href="../CSS/A5.css" title="CSS_for_nr_5">
+    <script src="../Script/A5.js"></script>
+    <script src="../Script/NavBar.js"></script>
+</head>
+<body onload="createNavBar();">
+
+<div id="headPic">
+    <h2><span id="head-title">Übung 5:</span></h2>
+    <br>
+</div>
+
+<h3>Aufgabe 5.1</h3>
+<p>Performanz-Messungen von <code>innerHTML</code>, <code>innerText</code>, <code>textContent</code>, <code>outerHTML</code>
+    mit der performance.now() Funktion.</p>
+
+<form>
+    <button type="button" onclick="performanceTest()">Messung starten</button>
+</form>
+<br>
+
+<div id="A5.1">
+    <h5 id="inHTML"></h5>
+    <h5 id="intext"></h5>
+    <h5 id="textcon"></h5>
+    <h5 id="outHTML"></h5>
+</div>
+
+<h3>Aufgabe 5.2</h3>
+<div id="timer">
+    <h4>Rednerliste</h4>
+    <form>
+        <nobr>
+        <label class="text" for="addRedner">Neuer Redner:</label>
+        <input type="text" id="addRedner" name="feld" placeholder="Enter new Speaker">
+            <button type="button" onclick="addRedner()">Hinzufügen</button>
+        </nobr>
+    </form>
+    <ul id="speaker"></ul>
+</div>
+
+</body>
+</html>

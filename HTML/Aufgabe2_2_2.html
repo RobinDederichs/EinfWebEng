@@ -6,18 +6,12 @@
     <title>Unteraufgabe Aufgabe 2</title>
 
   <link rel="stylesheet" href="../CSS/A2_2_2.css" title="Navigationszeile">
+    <script src="../Script/NavBar.js"></script>
 </head>
-<body>
-<ul class="navZeUl">
-    <li class="navZeLi"><a href="../index.html">Home</a></li>
-    <li class="navZeLi"><a title="Klicken um zur ersten Aufgabe zu kommen" href="Aufgabe1.html">Aufgabe 1</a></li>
-    <li class="navZeLi"><a title="Klicken um zur zweiten Aufgabe zu kommen" href="Aufgabe2.html">Aufgabe 2</a></li>
-  <li class="navZeLi"><a title="Klicken um zur dritten Aufgabe zu kommen" href="Aufgabe3.html">Aufgabe 3</a></li>
-  <li class="navZeLi"><a title="Klicken um zur vierten Aufgabe zu kommen" href="Aufgabe4.html">Aufgabe 4</a></li>
-</ul>
-<br>
+<body onload="createNavBar();">
 
-<h1>Aufgabe 2.2.2</h1>
+
+<h1 id="headPic">Aufgabe 2.2.2</h1>
 
 <label for="box">hide and show via checkbox</label>
 <input type="checkbox" class="checkbox" id="box" style="scale: 2; margin-bottom: 10px; display: inline-block;">
