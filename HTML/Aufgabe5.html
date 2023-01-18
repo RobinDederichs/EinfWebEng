@@ -6,7 +6,6 @@
     <title>Aufgabe 5 - DOM</title>
 
     <link rel="stylesheet" href="../CSS/A5.css" title="CSS_for_nr_5">
-    <script src="../Script/A5.js"></script>
     <script src="../Script/NavBar.js"></script>
 </head>
 <body onload="createNavBar();">
@@ -32,18 +31,22 @@
     <h5 id="outHTML"></h5>
 </div>
 
+<br>
 <h3>Aufgabe 5.2</h3>
 <div id="timer">
-    <h4>Rednerliste</h4>
+    <h4>Rednerliste - Redner müssen einzigartige Namen haben!</h4>
     <form>
         <nobr>
-        <label class="text" for="addRedner">Neuer Redner:</label>
-        <input type="text" id="addRedner" name="feld" placeholder="Enter new Speaker">
+        <label class="text" for="addRednerInput">Neuer Redner:</label>
+        <input type="text" id="addRednerInput" name="feld" placeholder="Enter new Speaker" >
             <button type="button" onclick="addRedner()">Hinzufügen</button>
         </nobr>
     </form>
-    <ul id="speaker"></ul>
+    <ul id="speaker">
+        <!--<li><p>erstes p<span> 01111</span><button type="button" onclick="addRedner()">Hinzufügen</button></p></li>-->
+    </ul>
 </div>
 
 </body>
+<script src="../Script/A5.js"></script>
 </html>

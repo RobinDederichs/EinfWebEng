@@ -1,15 +1,73 @@
-function Timer(person) {
-    var d = Date();
-     var time = {
-         hours: 0,
-         minutes: 0,
-         seconds: 0
-     };
-     time.hours = d.getHours() - starttime.hr + person.hr;
-     time.minutes = d.getMinutes() - starttime.min + person.min;
-     time.seconds = d.getSeconds() - starttime.sec + person.min;
+function startSpeaker(personname) {
+    stopSpeaker();
+    
+    for(var z = 0; z < persons.length; z++) {
+        if (persons[z].name === personname) {
+            currentPerson = persons[z];
+            break;
+        }
+    }
+    
+    currentTime.hr = currentPerson.hr;
+    currentTime.min = currentPerson.min;
+    currentTime.sec = currentPerson.sec;
+    
+    myVar = window.setInterval(Timer, 1000);
+    
+    var name = currentPerson.name;
 
-     document.getElementById(person.name + "time").innerHTML = "" + time.hours + ":" + time.minutes + ":" + time.seconds;
+    document.getElementById(name + "button").innerHTML = "Stop";
+    document.getElementById(name + "button").setAttribute("onclick",
+        "stopSpeaker()");
+}
+
+
+function stopSpeaker() {
+    clearInterval(myVar);
+
+    currentPerson.hr = currentTime.hr;
+    currentPerson.min = currentTime.min;
+    currentPerson.sec = currentTime.sec;
+
+    var name = currentPerson.name;
+    if(currentPerson.sec < 10 && currentPerson.min < 10) {
+        document.getElementById(currentPerson.name + "time").innerHTML = "" + currentPerson.hr + ":0" +
+            currentPerson.min + ":0" + currentPerson.sec;
+    } else if(currentPerson.sec >= 10 && currentPerson.min < 10) {
+        document.getElementById(currentPerson.name + "time").innerHTML = "" + currentPerson.hr + ":0" +
+            currentPerson.min + ":" + currentPerson.sec;
+    } else if(currentPerson.sec >= 10 && currentPerson.min >= 10) {
+        document.getElementById(currentPerson.name + "time").innerHTML = "" + currentPerson.hr + ":" +
+            currentPerson.min + ":" + currentPerson.sec;
+    }
+    document.getElementById(name + "button").innerHTML = "Start";
+    document.getElementById(name + "button").setAttribute("onclick",
+        "startSpeaker('" + name +"')");
+}
+
+
+function Timer() {
+    currentTime.sec++;
+    if (currentTime.sec >= 60) {
+        currentTime.min++;
+        currentTime.sec = 0;
+    }
+    if (currentTime.min >= 60) {
+        currentTime.hour++;
+        currentTime.min = 0;
+    }
+
+    if(currentTime.sec < 10 && currentTime.min < 10) {
+        document.getElementById(currentPerson.name + "time").innerHTML = "" + currentTime.hr + ":0" + 
+            currentTime.min + ":0" + currentTime.sec;
+    } else if(currentTime.sec >= 10 && currentTime.min < 10) {
+        document.getElementById(currentPerson.name + "time").innerHTML = "" + currentTime.hr + ":0" +
+            currentTime.min + ":" + currentTime.sec;
+    } else if(currentTime.sec >= 10 && currentTime.min >= 10) {
+        document.getElementById(currentPerson.name + "time").innerHTML = "" + currentTime.hr + ":" +
+            currentTime.min + ":" + currentTime.sec;
+    }
+
 }
 
 function person(pname, phr, pmin, psec) {
@@ -20,55 +78,64 @@ function person(pname, phr, pmin, psec) {
         sec : psec
     };
 }
-var starttime =  {
+var currentTime =  {
         hr: 0,
         min: 0,
         sec: 0
-}
+};
+
 var persons = [];
 var i = 0;
 var myVar;
+var currentPerson;
 
 function addRedner() {
-    var redner = document.getElementById("addRedner").value;
+    if(currentPerson !== undefined) {
+        stopSpeaker();
+    }
+    var redner = document.getElementById("addRednerInput").value;
 
     var listitem = document.createElement("li");
-    listitem.setAttribute("id", redner);
+    listitem.setAttribute("id", redner + "item");
 
-    var nobr = document.createElement("nobr");
-    nobr.setAttribute(id, redner + "nobr");
+    var button = document.createElement("button");
+    button.setAttribute("id", redner + "button");
+    button.setAttribute("type", "button");
+    button.setAttribute("onclick", "stopSpeaker()");
+    button.innerHTML = "Stop";
 
     var p = document.createElement("p");
     p.setAttribute("id", redner + "name");
     p.innerHTML = redner;
 
-    nobr.appendChild(p);
+    listitem.appendChild(p);
 
-    p = document.createElement("p");
-    p.setAttribute("id", redner + "time");
+    span = document.createElement("span");
+    span.setAttribute("id", redner + "time");
 
-    nobr.appendChild(p);
+    p.appendChild(span);
+    p.appendChild(button);
 
-    listitem.appendChild(nobr);
     document.getElementById("speaker").appendChild(listitem);
 
-    persons[i++] = new person(document.getElementById("addRedner").value, 0, 0, 0);
-    var d = Date();
-    starttime.hr = d.getHours();
-    starttime.min = d.getMinutes();
-    starttime.sec = d.getSeconds();
-    myVar = window.setInterval(Timer(persons[i-1]), 1000);
+    persons[i++] = new person(document.getElementById("addRednerInput").value, 0, 0, 0);
+    currentPerson = persons[i - 1];
+    currentTime.hr = 0;
+    currentTime.min = 0;
+    currentTime.sec = 0;
+    myVar = window.setInterval(Timer, 1000);
 }
 
 
-var input = document.getElementById('addRedner');
 
-input.addEventListener('keypress', function(event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        addRedner();}
-})
+    var input = document.getElementById("addRednerInput");
 
+    input.addEventListener('keypress', function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            addRedner();
+        }
+    })
 
 function performanceTest() {
     var t0 = performance.now();
