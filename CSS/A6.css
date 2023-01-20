@@ -49,7 +49,7 @@ a.button:hover, a.button:active {
 #headPic {
     color:#1c1d1e; padding: 6vh 2vw;
     background: #FFFFFF
-    url(https://geekflare.com/wp-content/uploads/2018/06/javascript-1200x385.jpg)
+    url(https://res.cloudinary.com/practicaldev/image/fetch/s--mNNM3QVm--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/j6xltv413gil5ioazm49.jpg)
     left repeat scroll;
 }
 
@@ -67,4 +67,26 @@ code {
     border-radius: 4px;
 }
 
+input {
+    background-color: ghostwhite;
+}
 
+.red {
+    background-color: red;
+}
+
+.ghostwhite {
+    background-color: ghostwhite;
+}
+
+#optional {
+    display: none;
+}
+
+.checkbox:checked + #optional {
+    display: block;
+}
+
+p {
+    font-weight: bold;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aufgabe 6 - ECMAScript</title>
+
+  <link rel="stylesheet" href="../CSS/A6.css" title="CSS_for_nr_6">
+  <script src="../Script/NavBar.js"></script>
+  <script defer src="../Script/A6.js"></script>
+</head>
+<body onload="createNavBar();">
+
+<div id="headPic">
+  <h2><span id="head-title">Übung 6:</span></h2>
+  <br>
+</div>
+
+<h3>Aufgabe 6.1 mit Bonus - Klammerpaare-Check optional mit eigenen Zeichen</h3>
+<p>Geben sie eine beliebige Zeichenkette, bestehend aus Buchstaben, Zahlen und Sonderzeichen, ein und es wird geprüft, ob
+    die Klammern (<code>(...)</code>, <code>[...]</code>, <code>{...}</code>) richtig geschachtelt sind.<br><br>
+    Optional können individuelle Klammerpaare über die Eingabefelder festgelegt werden. Bleiben diese leer, werden die
+    normalen Klammerpaare abgeprüft.</p>
+
+<br>
+<label for="box">Eigene Klammerpaare bestimmen</label>
+<input type="checkbox" class="checkbox" id="box" onclick="toggleFlag()" style="scale: 2; margin-bottom: 10px; display: inline-block;">
+<div id="optional">
+<p style="font-style: italic">Hinweis: Alle eingaben müssen einzigartig sein, es wird jeweils das erste Zeichen der Eingabe genutzt.</p>
+<br>
+<form>
+    <label class="text" for="opFirst">Eingabe öffnendes und schließendes Zeichen der ersten "Klammer":</label>
+    <input type="text" id="opFirst" name="feld" placeholder="Enter an opening character" >
+    <input type="text" id="clFirst" name="feld" placeholder="Enter a closing character" >
+<br> <br>
+    <label class="text" for="opSecond">Eingabe öffnendes und schließendes Zeichen der zweiten "Klammer":</label>
+    <input type="text" id="opSecond" name="feld" placeholder="Enter an opening character" >
+    <input type="text" id="clSecond" name="feld" placeholder="Enter a closing character" >
+<br> <br>
+    <label class="text" for="opThird">Eingabe öffnendes und schließendes Zeichen der dritten "Klammer":</label>
+    <input type="text" id="opThird" name="feld" placeholder="Enter an opening character" >
+    <input type="text" id="clThird" name="feld" placeholder="Enter a closing character" >
+
+</form>
+</div>
+<br><br>
+
+<form>
+  <nobr>
+    <label class="text" for="klammerChecker">Eingabe Zeichenkette:</label>
+    <input type="text" id="klammerChecker" name="feld" placeholder="Enter a String" >
+    <button type="button" onclick="if (flag) {
+                                            klammerCheck(document.getElementById('opFirst').value,
+                                                        document.getElementById('clFirst').value,
+                                                        document.getElementById('opSecond').value,
+                                                        document.getElementById('clSecond').value,
+                                                        document.getElementById('opThird').value,
+                                                        document.getElementById('clThird').value,);
+                                            } else {
+                                                klammerCheck();
+                                              }">Prüfen</button>
+  </nobr>
+</form>
+<br>
+
+<h3>Aufgabe 6.2 - Topologische Iterierbarkeit</h3>
+<p>Geben sie eine beliebige topologische Reihenfolge mit folgendem Muster ein:<code>('vor', 'nach'), ('vor', 'nach'),...</code>
+    durch Submit wird die topologische Sortierung durchlaufen und auf der Konsole ausgegeben.</p>
+<br>
+
+<form>
+    <nobr>
+        <label class="text" for="A6.2">Topologische Reihenfolge:</label>
+        <input type="text" id="A6.2" name="feld" placeholder="('vor', 'nach'), ('vor', 'nach'),..." >
+        <button type="button" onclick="topIter(document.getElementById('A6.2').value)">Submit</button>
+    </nobr>
+</form>
+
+</body>
+</html>
