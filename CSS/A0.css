@@ -6,10 +6,6 @@
     background-color: #333333;
 }
 
-.navZeLi {
-    float: left;
-}
-
 .navZeLi a {
     display: block;
     color: white;
@@ -20,6 +16,14 @@
 
 .navZeLi:hover {
     background-color: #111111;
+}
+
+#lireiter {
+    display: none;
+}
+
+.toggleable {
+    display: inline-flex;
 }
 
 .unteraufgaben {
@@ -45,12 +49,54 @@ a.button:hover, a.button:active {
     background-color: #111111;
 }
 
+@media screen and (max-width: 1000px) {
+    .navZeUl {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+    }
+
+    .navZeLi {
+        text-align: center;
+    }
+
+    .navZeLi a {
+        display: inline-flex;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    .navZeLi:hover {
+        background-color: #111111;
+    }
+
+    .toggleable {
+        display: none;
+    }
+
+    #lireiter {
+        display: inline-flex;
+    }
+}
 
 #headPic {
     color:#1c1d1e; padding: 6vh 2vw;
     background: #FFFFFF
     url(https://lea.hochschule-bonn-rhein-sieg.de/Customizing/global/skin/hbrs_5_4_14_mHB/images/header.jpg)
     left repeat scroll;
+}
+
+@media screen and (max-width: 1000px) {
+    #headPic {
+        color:#1c1d1e; padding: 6vh 2vw;
+        background: #FFFFFF
+        url(https://lea.hochschule-bonn-rhein-sieg.de/Customizing/global/skin/hbrs_5_4_14_mHB/images/header.jpg)
+        center repeat scroll;
+    }
 }
 
 #head-title {
@@ -66,5 +112,6 @@ code {
     background-color: #f9f2f4;
     border-radius: 4px;
 }
+
 
 

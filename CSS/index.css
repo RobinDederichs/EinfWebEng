@@ -82,37 +82,3 @@ a.button:hover, a.button:active {
         display: inline-flex;
     }
 }
-
-
-#headPic {
-    color:#1c1d1e; padding: 6vh 2vw;
-    background: #FFFFFF
-    url(https://geekflare.com/wp-content/uploads/2018/06/javascript-1200x385.jpg)
-    left repeat scroll;
-}
-
-@media screen and (max-width: 1000px) {
-
-    #headPic {
-        color:#1c1d1e; padding: 6vh 2vw;
-        background: #FFFFFF
-        url(https://geekflare.com/wp-content/uploads/2018/06/javascript-1200x385.jpg)
-        center repeat scroll;
-    }
-}
-
-#head-title {
-    background-color: gainsboro;
-    padding: 5px;
-    border-radius: 15px;
-}
-
-code {
-    padding: 2px 4px;
-    font-size: 90%;
-    color: #c7254e;
-    background-color: #f9f2f4;
-    border-radius: 4px;
-}
-
-

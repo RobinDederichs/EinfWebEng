@@ -26,7 +26,7 @@
 <label for="box">Eigene Klammerpaare bestimmen</label>
 <input type="checkbox" class="checkbox" id="box" onclick="toggleFlag()" style="scale: 2; margin-bottom: 10px; display: inline-block;">
 <div id="optional">
-<p style="font-style: italic">Hinweis: Alle eingaben müssen einzigartig sein, es wird jeweils das erste Zeichen der Eingabe genutzt.</p>
+<p style="font-style: italic">Hinweis: Alle Eingaben müssen einzigartig sein, es wird jeweils das erste Zeichen der Eingabe genutzt.</p>
 <br>
 <form>
     <label class="text" for="opFirst">Eingabe öffnendes und schließendes Zeichen der ersten "Klammer":</label>
@@ -63,18 +63,23 @@
 </form>
 <br>
 
+<div id="notFulfilled">
 <h3>Aufgabe 6.2 - Topologische Iterierbarkeit</h3>
-<p>Geben sie eine beliebige topologische Reihenfolge mit folgendem Muster ein:<code>('vor', 'nach'), ('vor', 'nach'),...</code>
+    <span id="warning">Versucht aber entschieden, gemessen an der bereits investierten Zeit, die Aufgabe zu lassen.</span>
+<p>Geben sie eine beliebige topologische Reihenfolge mit folgendem Muster ein:<code>('vor', 'nach'); ('vor', 'nach');...</code>
     durch Submit wird die topologische Sortierung durchlaufen und auf der Konsole ausgegeben.</p>
 <br>
 
 <form>
     <nobr>
         <label class="text" for="A6.2">Topologische Reihenfolge:</label>
-        <input type="text" id="A6.2" name="feld" placeholder="('vor', 'nach'), ('vor', 'nach'),..." >
+        <input type="text" id="A6.2" name="feld" placeholder="('vor', 'nach'); ('vor', 'nach');..." >
         <button type="button" onclick="topIter(document.getElementById('A6.2').value)">Submit</button>
     </nobr>
 </form>
+</div>
+<br>
+
 
 </body>
 </html>

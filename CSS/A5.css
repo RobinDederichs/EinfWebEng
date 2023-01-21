@@ -6,10 +6,6 @@
     background-color: #333333;
 }
 
-.navZeLi {
-    float: left;
-}
-
 .navZeLi a {
     display: block;
     color: white;
@@ -20,6 +16,14 @@
 
 .navZeLi:hover {
     background-color: #111111;
+}
+
+#lireiter {
+    display: none;
+}
+
+.toggleable {
+    display: inline-flex;
 }
 
 .unteraufgaben {
@@ -43,6 +47,40 @@ a.button:link, a.button:visited {
 
 a.button:hover, a.button:active {
     background-color: #111111;
+}
+
+@media screen and (max-width: 1000px) {
+    .navZeUl {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+    }
+
+    .navZeLi {
+        text-align: center;
+    }
+
+    .navZeLi a {
+        display: inline-flex;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    .navZeLi:hover {
+        background-color: #111111;
+    }
+
+    .toggleable {
+        display: none;
+    }
+
+    #lireiter {
+        display: inline-flex;
+    }
 }
 
 

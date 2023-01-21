@@ -6,10 +6,6 @@
     background-color: #333333;
 }
 
-.navZeLi {
-    float: left;
-}
-
 .navZeLi a {
     display: block;
     color: white;
@@ -20,6 +16,14 @@
 
 .navZeLi:hover {
     background-color: #111111;
+}
+
+#lireiter {
+    display: none;
+}
+
+.toggleable {
+    display: inline-flex;
 }
 
 .unteraufgaben {
@@ -45,12 +49,55 @@ a.button:hover, a.button:active {
     background-color: #111111;
 }
 
+@media screen and (max-width: 1000px) {
+    .navZeUl {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+    }
+
+    .navZeLi {
+        text-align: center;
+    }
+
+    .navZeLi a {
+        display: inline-flex;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    .navZeLi:hover {
+        background-color: #111111;
+    }
+
+    .toggleable {
+        display: none;
+    }
+
+    #lireiter {
+        display: inline-flex;
+    }
+}
+
 
 #headPic {
     color:#1c1d1e; padding: 6vh 2vw;
     background: #FFFFFF
     url(https://res.cloudinary.com/practicaldev/image/fetch/s--mNNM3QVm--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/j6xltv413gil5ioazm49.jpg)
     left repeat scroll;
+}
+
+@media screen and (max-width: 1000px) {
+    #headPic {
+        color:#1c1d1e; padding: 6vh 2vw;
+        background: #FFFFFF
+        url(https://res.cloudinary.com/practicaldev/image/fetch/s--mNNM3QVm--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/j6xltv413gil5ioazm49.jpg)
+        center repeat scroll;
+    }
 }
 
 #head-title {
@@ -89,4 +136,12 @@ input {
 
 p {
     font-weight: bold;
+}
+
+#notFulfilled {
+    color: lightgrey;
+}
+
+#warning {
+    color: coral;
 }

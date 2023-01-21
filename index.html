@@ -3,46 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/EinfWebEng/CSS/index.css" title="CSS_for_index">
     <title>WebApp_rdeder2s</title>
+    <script>
+        function createNavBar() {
+            var ul = document.createElement("ul");
+            ul.setAttribute("class", "navZeUl");
 
-    <style>
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333333;
+            var title = [];
+            title[0] = "Klicken um zur Startseite zu kommen";
+            title[1] = "Klicken um zur ersten Aufgabe zu kommen";
+            title[2] = "Klicken um zur zweiten Aufgabe zu kommen";
+            title[3] = "Klicken um zur dritten Aufgabe zu kommen";
+            title[4] = "Klicken um zur vierte Aufgabe zu kommen";
+            title[5] = "Klicken um zur fünfte Aufgabe zu kommen";
+            title[6] = "Klicken um zur sechste Aufgabe zu kommen";
+            title[7] = "Klicken um zur siebten Aufgabe zu kommen"
+
+            var link = [];
+            link[0] = "index.html";
+            link[1] = "/EinfWebEng/HTML/Aufgabe1.html";
+            link[2] = "/EinfWebEng/HTML/Aufgabe2.html";
+            link[3] = "/EinfWebEng/HTML/Aufgabe3.html";
+            link[4] = "/EinfWebEng/HTML/Aufgabe4.html";
+            link[5] = "/EinfWebEng/HTML/Aufgabe5.html";
+            link[6] = "/EinfWebEng/HTML/Aufgabe6.html";
+            link[7] = "/EinfWebEng/HTML/Aufgabe7.html";
+
+            var text = [];
+            text[0] = "Home";
+            text[1] = "Aufgabe1";
+            text[2] = "Aufgabe2";
+            text[3] = "Aufgabe3";
+            text[4] = "Aufgabe4";
+            text[5] = "Aufgabe5";
+            text[6] = "Aufgabe6";
+            text[7] = "Aufgabe7";
+
+            var a = document.createElement("a");
+            a.setAttribute("title", "Navigation");
+            let span = document.createElement("span");
+            span.setAttribute("id", "reiter");
+            a.appendChild(span);
+            span.innerHTML = "Navigation &nabla;";
+            var li = document.createElement("li");
+            li.setAttribute("class", "navZeLi");
+            li.setAttribute("id", "lireiter");
+            li.appendChild(a);
+            ul.appendChild(li);
+
+            for (var i = 0; i < link.length; i++) {
+                var a = document.createElement("a");
+                a.setAttribute("title", title[i]);
+                a.setAttribute("href", link[i]);
+                a.innerHTML = text[i];
+                var li = document.createElement("li");
+                li.setAttribute("class", "navZeLi inner toggleable");
+                li.appendChild(a);
+                ul.appendChild(li);
+            }
+
+            var header = document.getElementById("headPic");
+            document.body.insertBefore(ul, header);
+
+            document.getElementById("lireiter").addEventListener("click", function(){
+                toggleShowNavbar();
+            });
+
         }
 
-        li {
-            float: left;
+        let toggleFlag = false;
+        function toggleShowNavbar() {
+            if(toggleFlag) {
+                hideNavbar()
+            } else {
+                showNavbar()
+            }
         }
 
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 16px;
-            text-decoration: none;
+        function showNavbar() {
+            let inner = document.querySelectorAll('.inner');
+            for(let li of inner) {
+                li.classList.toggle("toggleable");
+            }
+            document.getElementById("reiter").innerHTML = "Schließen &#9587;";
+            toggleFlag = true;
         }
 
-        li a:hover {
-            background-color: #111111;
+        function hideNavbar() {
+            let inner = document.querySelectorAll('.inner');
+            for(let li of inner) {
+                li.classList.toggle("toggleable");
+            }
+            document.getElementById("reiter").innerHTML = "Navigation &nabla;";
+            toggleFlag = false;
         }
-    </style>
+    </script>
 </head>
-<body>
+<body onload="createNavBar();">
+
 
 <h1 style="text-align:center;background-color:#4eaae8;color:white;padding:20px;">WebApp_rdeder2s</h1>
 <h2>Aufgaben:</h2>
-<ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a title="Klicken um zur ersten Aufgabe zu kommen" href="HTML/Aufgabe1.html">Aufgabe 1</a></li>
-    <li><a title="Klicken um zur zweiten Aufgabe zu kommen" href="HTML/Aufgabe2.html">Aufgabe 2</a></li>
-  <li class="navZeLi"><a title="Klicken um zur dritten Aufgabe zu kommen" href="HTML/Aufgabe3.html">Aufgabe 3</a></li>
-  <li class="navZeLi"><a title="Klicken um zur vierten Aufgabe zu kommen" href="HTML/Aufgabe4.html">Aufgabe 4</a></li>
-    <li class="navZeLi"><a title="Klicken um zur fünften Aufgabe zu kommen" href="HTML/Aufgabe5.html">Aufgabe 5</a></li>
-</ul>
+
+<div id="headerPic">
+
+</div>
 
 </body>
 </html>
