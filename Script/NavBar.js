@@ -11,6 +11,7 @@ function createNavBar() {
     title[5] = "Klicken um zur fünfte Aufgabe zu kommen";
     title[6] = "Klicken um zur sechste Aufgabe zu kommen";
     title[7] = "Klicken um zur siebten Aufgabe zu kommen";
+    title[8] = "Klicken um zur achten Aufgabe zu kommen";
 
     var link = [];
     link[0] = "../index.html";
@@ -21,6 +22,7 @@ function createNavBar() {
     link[5] = "Aufgabe5.html";
     link[6] = "Aufgabe6.html";
     link[7] = "Aufgabe7.html";
+    link[8] = "Aufgabe8.html";
 
     var text = [];
     text[0] = "Home";
@@ -31,6 +33,7 @@ function createNavBar() {
     text[5] = "Aufgabe5";
     text[6] = "Aufgabe6";
     text[7] = "Aufgabe7";
+    text[8] = "Aufgabe8";
 
     var a = document.createElement("a");
     a.setAttribute("title", "Navigation");
