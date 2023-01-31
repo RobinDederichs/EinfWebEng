@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de-DE">
 <head>
+    <link rel="stylesheet" type="text/css" href="CSS/index.css"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/EinfWebEng/CSS/index.css" title="CSS_for_index">
@@ -69,8 +70,7 @@
                 ul.appendChild(li);
             }
 
-            var header = document.getElementById("headPic");
-            document.body.insertBefore(ul, header);
+            document.getElementById("headerPic").appendChild(ul);
 
             document.getElementById("lireiter").addEventListener("click", function(){
                 toggleShowNavbar();
@@ -107,13 +107,62 @@
     </script>
 </head>
 <body onload="createNavBar();">
-
-
 <h1 style="text-align:center;background-color:#4eaae8;color:white;padding:20px;">WebApp_rdeder2s</h1>
 <h2>Aufgaben:</h2>
-
 <div id="headerPic">
+</div>
 
+<div style="text-align:center;">
+
+    <h3 id="infoueber"><span id="infospan">Willkommen zu meiner Website zum Modul Einführung in Web Engineering!</span></h3>
+    <p id="infoHinweise">Einige Hinweise zum Aufbau dieser Projektarbeit:</p>
+    <ul id="infolist">
+        <li class="info">Oben ist der Navigator zu finden, mit dem man auf die verschieden Subsites der Aufgaben <br>gelangen kann.</li>
+        <li class="info">Die Behandlung der Themen erfolgt sukzessiv und aufeinander aufbauend. D. h.:
+            <ul>
+                <li class="info">Bei jeder weiteren Subsite mit dem entsprechenden Thema wurde versucht <br>das gelernte der
+                    vorherigen Themen mit anzuwenden und zu <br>berücksichtigen, sofern dies sinnvoll war.</li>
+                <li class="info">So wird erlerntes bei den späteren Themen in Kombination angewendet, <br> während die späteren
+                    Themen bei vorherigen Themen nicht zum Einsatz <br> kommen.
+                    <ul>
+                        <li class="info" style="font-style: italic">
+                            Bei Thema 6 wird z. B. eine Kombination von CSS, JavaScript und <br> DOM angewendet, bei
+                            Thema 1 jedoch nur HTML, da die späteren <br> Technologien noch nicht bekannt waren.
+                        </li>
+                    </ul>
+                </li>
+                <li class="info">
+                    Dadurch ist zu erkennen, wie der Lernprozess und die Entwicklung der <br> Kenntnisse sich über die
+                    Zeit des Moduls immer weiterentwickelt haben.
+                </li>
+                <li class="info">
+                    Ist demnach auf einer Subsite schon eine Technologie aus einem späteren <br> Thema vorzufinden,
+                    handelt es sich hierbei um eine Eigenkreation, <br> welche aus meinem eigenen vorherigen Wissen
+                    stammt und umgesetzt <br> wurde bevor ich mich mit dem entsprechenden Thema beschäftigt habe.
+                </li>
+                <li class="info">
+                    Davon ausgenommen ist der Navigator, der sich zwar auch über die Zeit <br> stetig verändert
+                    (verbessert) hat, aber auf jeder Seite einheitlich ist, um <br>
+                    die Funktionsweise zu gewährleisten.
+                </li>
+            </ul>
+        </li>
+        <li class="info">
+            Der Code wurde von mir selbst verfasst unter zuhilfenahme von
+            <a href="https://www.w3schools.com/">W3CSchools</a> und <br>den Beispielen aus der Vorlesung. Andere
+                Internetrecherchen wurden zu <br> Verständnis zwecken genutzt, ein Copy&Paste hat jedoch nicht
+                stattgefunden.
+        </li>
+        <li class="info">
+            Die Quellen der verwendeten Bilder sind am Ende der Subsites zu finden.
+        </li>
+        <li>
+            Oftmals lohnt sich auch ein Blick in den Quellcode oder frühere Commits, um <br> den Entwicklungsprozess
+            rund um Webengineering zu betrachten.
+        </li>
+    </ul>
+    <br>
+    <h3>Und nun viel Spaß beim Erkunden meiner Website! <br> - Robin Dederichs, rdeder2s</h3>
 </div>
 
 </body>

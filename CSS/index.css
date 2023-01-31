@@ -49,6 +49,31 @@ a.button:hover, a.button:active {
     background-color: #111111;
 }
 
+.info {
+    padding-top: 10px;
+}
+
+#infoueber {
+    padding-top: 5vh;
+}
+
+#infoHinweise {
+    padding-right: 250px;
+    font-style: italic;
+}
+
+#infolist {
+    text-align: start;
+    padding-left: 35vw;
+    line-height: 25px;
+}
+
+#infospan {
+    padding: 9px;
+    border: 5px solid #4eaae8;
+    border-radius: 4px;
+}
+
 @media screen and (max-width: 1000px) {
     .navZeUl {
         list-style-type: none;
@@ -80,5 +105,18 @@ a.button:hover, a.button:active {
 
     #lireiter {
         display: inline-flex;
+    }
+
+    #infoHinweise {
+        padding-right: 0px;
+    }
+
+    #infolist {
+        padding-left: 3vw;
+    }
+    #infospan {
+        padding: 4px;
+        border: 0px solid #4eaae8;
+        color: #4EA9E6;
     }
 }
