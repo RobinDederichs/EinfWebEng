@@ -84,20 +84,42 @@ a.button:hover, a.button:active {
 }
 
 #headPic {
-    color:#1c1d1e; padding: 6vh 2vw;
+    color:#1c1d1e; padding: 5vh 2vw;
     background: #FFFFFF
-    url(https://lea.hochschule-bonn-rhein-sieg.de/Customizing/global/skin/hbrs_5_4_14_mHB/images/header.jpg)
+    url(http://www.vanseodesign.com/blog/wp-content/uploads/2012/07/scalable-vector-graphics.png)
     left repeat scroll;
+    border: 1px solid black;
+}
+
+
+@media screen and (max-width: 1500px) {
+    #svg91 {
+        width: 1200px;
+        height: 1200px;
+    }
 }
 
 @media screen and (max-width: 1000px) {
     #headPic {
-        color:#1c1d1e; padding: 6vh 2vw;
+        color:#1c1d1e; padding: 5vh 2vw;
         background: #FFFFFF
-        url(https://lea.hochschule-bonn-rhein-sieg.de/Customizing/global/skin/hbrs_5_4_14_mHB/images/header.jpg)
+        url(http://www.vanseodesign.com/blog/wp-content/uploads/2012/07/scalable-vector-graphics.png)
         center repeat scroll;
     }
+
+    #svg91 {
+        width: 750px;
+        height: 750px;
+    }
 }
+
+@media screen and (max-width: 600px) {
+    #svg91 {
+        width: 500px;
+        height: 500px;
+    }
+}
+
 
 #head-title {
     background-color: gainsboro;
@@ -113,5 +135,28 @@ code {
     border-radius: 4px;
 }
 
+#rect {
+    fill: #BF7D8D;
+}
 
+.innerrect {
+    fill: white;
+}
 
+#graph9\.1:hover {
+    transform: scale(2);
+}
+
+#graph9\.1 {
+    transition: transform .2s;
+}
+
+.kasten {
+    fill: white;
+    stroke-width: 2px;
+    stroke: #000000;
+}
+
+.disable {
+    display: none;
+}

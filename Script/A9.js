@@ -1,0 +1,1 @@
+const feld = [[document.getElementById("kasten1"), document.getElementById("kasten2"), doc]];
