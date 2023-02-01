@@ -15,6 +15,56 @@
   <br>
 </div>
 
+<h3>Aufgabe 10.1 - Static classes in TypeScript</h3>
+<p><b>Antwort:</b> In TypeScript kann eine statische Klasse mit dem Schlüsselwort "static" definiert werden. Statische Klassen können nur
+  über ihren Namen direkt angesprochen werden und haben keine Instanzen. Alle Methoden und Eigenschaften, die in einer
+  statischen Klasse definiert sind, sind ebenfalls statisch und können ohne Instanzierung direkt über den Klassennamen
+  aufgerufen werden. <br>
+  Im Gegensatz dazu sind in objekt-orientierten Sprachen wie Java und C# alle Klassen instanzierbar und müssen erst
+  instanziiert werden, bevor man auf ihre Methoden und Eigenschaften zugreifen kann.</p>
+<br>
+
+<h3>Aufgabe 10.2 - Fehler finden mit TypeScript</h3>
+<p>
+  Gegeben sei folgendes fehlerbehaftete JavaScript-Programm. Ergänzen Sie dieses um möglichst viele Typisierungen und
+  übersetzen Sie es in ein TypeScript-Programm.<br><br>
+
+  <code>const add = (x,y) => x+y;<br>
+  const equals = (x,y) => x===y;<br>
+<br>
+  console.log( add(1,2) );<br>
+  console.log( add(true, true ) );<br>
+  console.log( add(true, false ) );<br>
+  var x = y = 1;<br>
+  console.log( add(equals(x,y), equals(y,x)) );</code><br><br>
+  Was ist der Fehler in dem gegebenen JavaScript-Code? Welche Fehler meldet TypeScript? Geben Sie weitere Beispiele an,
+  wie TypeScript bei der Fehlersuche helfen kann.
+</p>
+<br>
+<p>
+  <b>Antwort: </b>In dem JS Programm lassen sich folgende Fehler ausmachen:
+  <ul>
+  <li>Die Semantik der <code>add</code>-Funktion lässt sich nicht auf boolean-Werte anwenden.</li>
+  <li>In Zeile 7 wird <code>y</code> als globale Variable genutzt, was in der Regel nicht erwünscht ist.</li>
+  <li>In Zeile 8 werden die Ergebnisse der <code>equals</code>-Funktion als Parameter für <code>add</code> verwendet,
+  was ebenfalls nicht der Semantik von <code>add</code> entspricht.</li>
+</ul>
+
+Durch hinzufügen folgender Typisierungen und Änderungen in TypeScript:
+<pre><code>const add = (x: number, y: number): number => x + y;
+  const equals = (x: any, y: any): boolean => x === y;
+
+  console.log( add(1, 2) );
+  console.log( add(true, true) );
+  console.log( add(true, false) );
+
+  let x: number = 1;
+  let y: number = 1;
+  console.log( add(equals(x, y), equals(y, x)) );</code>
+</pre>
+
+werden die Aufrufe von <code>add</code> mit boolschen Werten und dem geschachtelten <code>equals</code> als compile Fehler angezeigt.
+</p>
 
 <div style="margin-top: 25vh">
   Quelle: <a href="https://geekflare.com/wp-content/uploads/2021/09/javascript-vs-typescript.jpg">
